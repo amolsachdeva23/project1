@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Hello, World!</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; color: #f8fafc; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: radial-gradient(circle at 10% 10%, #7c3aed 0, transparent 30rem), radial-gradient(circle at 90% 82%, #0891b2 0, transparent 32rem), #07111f; }
+      nav { display: flex; justify-content: space-between; align-items: center; width: min(92%, 70rem); margin: 0 auto; padding: 1.5rem 0; }
+      .brand { color: #fff; font-weight: 900; letter-spacing: -.04em; text-decoration: none; }
+      .links { display: flex; gap: .25rem; padding: .35rem; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; background: rgba(15,23,42,.55); backdrop-filter: blur(12px); }
+      .links a { padding: .55rem .75rem; border-radius: 999px; color: #e2e8f0; font-size: .86rem; font-weight: 700; text-decoration: none; }
+      .links a:hover, .links a[aria-current="page"] { color: #07111f; background: #f8fafc; }
+      main { width: min(88%, 70rem); margin: 0 auto; padding: 4rem 0 6rem; }
+      .eyebrow { color: #67e8f9; font-size: .85rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { max-width: 48rem; margin: .75rem 0 1rem; font-size: clamp(3rem, 8vw, 6rem); line-height: .95; letter-spacing: -.07em; }
+      .intro { max-width: 38rem; margin: 0 0 3rem; color: #cbd5e1; font-size: 1.1rem; line-height: 1.7; }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 9rem; gap: 1rem; }
+      .tile { position: relative; display: flex; align-items: end; overflow: hidden; padding: 1.25rem; border: 1px solid rgba(255,255,255,.17); border-radius: 1.3rem; color: #fff; box-shadow: 0 1.5rem 3rem rgba(0,0,0,.2); isolation: isolate; transition: transform .25s ease; }
+      .tile::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(160deg, transparent 40%, rgba(2,6,23,.8)); }
+      .tile:hover { transform: translateY(-.35rem); }
+      .tile span { font-weight: 800; font-size: 1.1rem; }
+      .one { grid-column: span 7; grid-row: span 3; background: linear-gradient(135deg, #a855f7, #312e81 52%, #0f172a); }
+      .two { grid-column: span 5; grid-row: span 2; background: linear-gradient(135deg, #06b6d4, #0e7490 60%, #164e63); }
+      .three { grid-column: span 5; grid-row: span 2; background: linear-gradient(135deg, #f472b6, #be185d 58%, #500724); }
+      .four { grid-column: span 4; grid-row: span 2; background: linear-gradient(135deg, #fde68a, #f97316 55%, #9a3412); }
+      .five { grid-column: span 8; grid-row: span 2; background: linear-gradient(135deg, #5eead4, #0f766e 50%, #134e4a); }
+      @media (max-width: 42rem) { nav { align-items: flex-start; } .brand { display: none; } .links { gap: 0; } .links a { padding: .5rem .6rem; font-size: .78rem; } .grid { grid-template-columns: 1fr; grid-auto-rows: 12rem; } .tile, .one, .two, .three, .four, .five { grid-column: auto; grid-row: auto; } }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation">
+      <a class="brand" href="index.html">hello, world.</a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <main>
+      <span class="eyebrow">Gallery</span>
+      <h1>Colorful ideas, collected.</h1>
+      <p class="intro">A small visual playground for the sparks, moods, and moments that inspire the next thing we make.</p>
+      <section class="grid" aria-label="Gallery collection">
+        <article class="tile one"><span>Midnight bloom</span></article>
+        <article class="tile two"><span>Ocean signal</span></article>
+        <article class="tile three"><span>Electric sunset</span></article>
+        <article class="tile four"><span>Golden hour</span></article>
+        <article class="tile five"><span>Fresh perspective</span></article>
+      </section>
+    </main>
+  </body>
+</html>
